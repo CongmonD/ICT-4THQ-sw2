@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+ <div class="col-md-9 text">
+            <h2>Enter values for x and y:</h2>
+                <label for="x">x:</label>
+            <input type="text" id="x"><br><br>
+                <label for="y">y:</label>
+            <input type="text" id="y"><br><br>
+            <div class="container">
+                   <button class="btn" onclick="prod()">Product of x and y</button>
+                   <button class="btn" onclick="pow()">x raised to the power of y</button>
+                   <button class="btn" onclick="rem()">Remainder of x divided by y</button>
+                   <button class="btn" onclick="equal()">Is x equal to y?</button>
+        </div>
+    </div>
+
+    <script>
+
+        function prod() {
+            var x = parseInt(document.getElementById("x").value);
+            var y = parseInt(document.getElementById("y").value);
+            var product = x * y;
+            var message = "Product of x and y: " + product;
+            window.alert(message);
+        }
+
+        function pow() {
+            var x = parseInt(document.getElementById("x").value);
+            var y = parseInt(document.getElementById("y").value);
+            var power = Math.pow(x, y);
+            var message = "x raised to the power of y: " + power;
+            window.alert(message);
+        }
+
+        function rem() {
+            var x = parseInt(document.getElementById("x").value);
+            var y = parseInt(document.getElementById("y").value);
+            var remainder = x % y;
+            var message = "Remainder of x divided by y: " + remainder;
+            window.alert(message);
+        }
+
+        function equal() {
+            var x = parseInt(document.getElementById("x").value);
+            var y = parseInt(document.getElementById("y").value);
+            var isEqual = x === y;
+            var message = "Is x equal to y?: " + isEqual;
+            window.alert(message);
+        }
+    </script>
+</body>
+</html> 
+
